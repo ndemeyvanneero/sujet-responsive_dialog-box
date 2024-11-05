@@ -21,6 +21,7 @@ class _WebMenuState extends State<WebMenu> {
     return Scaffold(
       backgroundColor: Colors.blue.withOpacity(.001),
       body: Row(
+        
         children: [
           Expanded(
             child: GestureDetector(

@@ -25,14 +25,17 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () async {
+            // dans ce cas menu content peut etre une page ect...
+            // du moment ou c'est un widget c'est bon
             String? value = await UtilsHelper.openMenu<String>(
               context,
               menuContent: menuContent(
                 context: context,
               ),
             );
-            print("##############################################");
-            print("###RESULTAT DE NOTRE BOITE DE DIALOGUE : $value");
+            UtilsHelper.log(
+              message: "###RESULTAT DE NOTRE BOITE DE DIALOGUE : $value",
+            );
           },
           child: Text(
             "Afficher le Menu ${MediaQuery.of(context).size.width > 600 ? "Desktop" : "Mobile"}",
